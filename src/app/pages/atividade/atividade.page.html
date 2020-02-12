@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>atividade</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    <ion-menu-button ></ion-menu-button>
+    <ion-button href="#" goBack>Back</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Titulo:</ion-label>
+      <ion-input clearInput placeholder="Desenv. Projeto Elétrico" value="titulo"[(ngModel)]="titulo"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-toolbar>
+    <ion-button fill="solid" slot="end" class="enviar" (click)="onSubmit()" >
+      Enviar
+      <ion-icon name="checkmark-circle"></ion-icon>
+    </ion-button>
+    <ion-button fill="solid" slot="end" class="cancelar" (click)="limpaDados()">
+      Cancelar
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+
+</ion-content>

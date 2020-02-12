@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+      <ion-button href="#" goBack>Back</ion-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Colaborador</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Nome Completo:</ion-label>
+        <ion-input required clearInput placeholder="Maurício Simões" value="nome"[(ngModel)]="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Matrícula:</ion-label>
+        <ion-input type="number" placeholder="134" min="0"value="1406" autocorrect="on" [(ngModel)]="matricula"
+          onkeyup="this.value=this.value.replace(/\D/g,'')"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>E-mail Corporativo:</ion-label>
+        <ion-input type="email" placeholder="colab@people-team.com" [(ngModel)]="email_corp" value="email@email.com"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>E-mail Pessoal:</ion-label>
+        <ion-input type="email" value="email@email.com" placeholder="colab@email.com" [(ngModel)]="email_part" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label align-items-baseline>Perfil do Colaborador</ion-label>
+        <ion-select placeholder="Selecione" okText="Selecionar" cancelText="Cancelar" [(ngModel)]="tipo">
+          <ion-select-option *ngFor="let p of itensDoPerfil" type="number" value="{{p.tipo}}">
+            {{p.titulo}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+  <ion-toolbar>
+    <ion-button fill="solid" slot="end" class="enviar" (click)="onSubmit()" >
+      Enviar
+      <ion-icon name="checkmark-circle"></ion-icon>
+    </ion-button>
+    <ion-button fill="solid" slot="end" class="cancelar" (click)="limpaDados()">
+      Cancelar
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+
+</ion-content>

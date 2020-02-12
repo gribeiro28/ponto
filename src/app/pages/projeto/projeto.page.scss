@@ -1,0 +1,23 @@
+/*.atividade{
+    ion-header{
+        ion-row{
+            
+        }
+    }
+    ion-row{
+        ion-col{
+            
+        }
+    }
+}
+*/
+
+.alert-tappable.alert-radio {
+    height: auto !important;
+    contain: content !important;
+}
+
+.alert-radio-label.sc-ion-alert-md,
+.alert-radio-label.sc-ion-alert-ios {
+    white-space: normal !important;
+}

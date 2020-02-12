@@ -1,0 +1,13 @@
+ion-grid{
+    ion-row{
+        ion-col{
+            background-color: cornflowerblue;
+            border: 2px solid;
+        }
+    }
+}
+
+.submit-buttons{
+    --border-radius: 15px;
+    --background: darkred;
+}

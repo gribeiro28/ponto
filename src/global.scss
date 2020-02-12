@@ -1,0 +1,60 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.enviar{
+    fill: solid;
+    --border-radius: 15px;
+    --background: darkred;
+    --background-hover: #3B0000 !important;
+    --background-focused: #3B0000 !important;
+    --background-activated: #3B0000 !important;
+    text-decoration: none;
+    text-align: center;
+}
+.cancelar{
+    fill: solid;
+    --border-radius: 15px;
+    --background: darkred;
+    --background-hover: #3B0000 !important;
+    --background-focused: #3B0000 !important;
+    --background-activated: #3B0000 !important;
+    text-decoration: none;
+    text-align: center;
+}
+ion-checkbox{
+    --background-checked : #3B0000;
+    --border-color: #3B0000;
+    --border-color-checked: #3B0000;
+}
+ion-list{
+    ion-item{
+        --highlight-color-focused:darkred;
+        --highlight-color-invalid: yellow;
+        --highlight-color-valid: darkred;
+    }
+}

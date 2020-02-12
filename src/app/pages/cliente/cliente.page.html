@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clientes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+      <ion-button href="#" goBack>Back</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome da Empresa:</ion-label>
+      <ion-input clearInput placeholder="Nissan" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome Fantasia:</ion-label>
+      <ion-input clearInput placeholder="Nissan Brasil" [(ngModel)]="nomeFant"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>E-mail Corporativo:</ion-label>
+      <ion-input type="email" placeholder="cliente@cliente.com" [(ngModel)]="emailCorp"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-checkbox checked="true" text="Fornecedor?" [(ngModel)]="fornecedor"></ion-checkbox>
+      <ion-label margin-start="15px;">Fornecedor?</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-toolbar>
+    <ion-button class="enviar" slot="end" type="submit" (click)="enviaDados()">
+      Enviar
+      <ion-icon name="checkmark-circle" ></ion-icon>
+    </ion-button>
+    <ion-button class="cancelar" slot="end" (click)="limpaCampos()">
+      Cancelar
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-content>
